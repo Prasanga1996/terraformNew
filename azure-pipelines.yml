@@ -9,16 +9,16 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
- bkstrgrg: 'rg-devops-dev'
- bkstrg: 'terraformproject007'
- bkcontainer: 'tfstate'
- bkstrgkey: 'devpipeline.terraform.tfstate'
+  bkstrgrg: 'rg-devops-dev'
+  bkstrg: 'terraformproject007'
+  bkcontainer: 'tfstate'
+  bkstrgkey: 'devpipeline.terraform.tfstate'
 
- stages:
+stages:
   - stage: tfvalidate
     jobs: 
       - job: validate
-        continueonerror: false
+        continueOnError: false
         steps: 
           - task: TerraformInstaller@1
             displayName: tfinstall
