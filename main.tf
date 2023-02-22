@@ -5,6 +5,12 @@ terraform {
       version = "~>3.0.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name = var.bkstrgrg
+    storage_account_name = var.bkstrg
+    container_name = var.bkcontainer
+    key = var.bkstrgkey
+  }
 }
 
 provider "azurerm" {
@@ -16,10 +22,4 @@ provider "azurerm" {
   client_secret   = "yWV8Q~eSdrVr6ZgWnj4r~dZdnScm5l10w.wSMcit"
 }
 
- backend "azurerm" {
-    resource_group_name = var.bkstrgrg
-    storage_account_name = var.bkstrg
-    container_name = var.bkcontainer
-    key = var.bkstrgkey
-  }
-}
+ 
