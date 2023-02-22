@@ -14,7 +14,7 @@ variables:
   bkstrgrg: 'rg-devops-dev'
   bkstrg: 'terraformproject007'
   bkcontainer: 'tfstate'
-  bkstrgkey: 'devpipeline.terraform.tfstate'
+  bkstrgkey: 'terraform.tfstate'
 
 stages:
   - stage: tfdestroy
